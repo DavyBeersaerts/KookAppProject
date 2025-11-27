@@ -1,4 +1,4 @@
-import { sqliteTable, text, integer } from "drizzle-orm/sqlite-core";
+import { sqliteTable, text, integer, index } from "drizzle-orm/sqlite-core";
 import { relations } from "drizzle-orm";
 
 // Using SQLite for local development with SSMS
@@ -85,6 +85,25 @@ export const pantry = sqliteTable("pantry", {
   lastUpdated: integer("last_updated", { mode: "timestamp" }).$defaultFn(() => new Date()),
 });
 
+export const masterIngredients = sqliteTable("master_ingredients", {
+  id: text("id").primaryKey().$defaultFn(() => crypto.randomUUID()),
+  canonicalKey: text("canonical_key").notNull().unique(),
+  names: text("names", { mode: "json" }).$type<{
+    en: string;
+    nl: string;
+  }>().notNull(),
+  synonyms: text("synonyms", { mode: "json" }).$type<{
+    en?: string[];
+    nl?: string[];
+  }>(),
+  category: text("category"),
+  defaultUnit: text("default_unit"),
+  createdAt: integer("created_at", { mode: "timestamp" }).$defaultFn(() => new Date()),
+  updatedAt: integer("updated_at", { mode: "timestamp" }).$defaultFn(() => new Date()),
+}, (table) => ({
+  canonicalKeyIdx: index("canonical_key_idx").on(table.canonicalKey),
+}));
+
 export const ingredients = sqliteTable("ingredients", {
   id: text("id").primaryKey().$defaultFn(() => crypto.randomUUID()),
   householdId: text("household_id").notNull().references(() => households.id, { onDelete: "cascade" }),
@@ -124,7 +143,7 @@ export const invites = sqliteTable("invites", {
   createdAt: integer("created_at", { mode: "timestamp" }).$defaultFn(() => new Date()),
 });
 
-// Relations
+ // Relations
 export const householdsRelations = relations(households, ({ many }) => ({
   users: many(users),
   recipes: many(recipes),
@@ -177,5 +196,16 @@ export const ingredientsRelations = relations(ingredients, ({ one }) => ({
   household: one(households, {
     fields: [ingredients.householdId],
     references: [households.id],
+  }),
+}));
+
+export const invitesRelations = relations(invites, ({ one }) => ({
+  household: one(households, {
+    fields: [invites.householdId],
+    references: [households.id],
+  }),
+  inviter: one(users, {
+    fields: [invites.invitedBy],
+    references: [users.id],
   }),
 }));

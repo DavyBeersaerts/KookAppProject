@@ -14,7 +14,9 @@
   "db:seed": "tsx scripts/seed.ts",
   "seed": "tsx scripts/seed.ts",
   "check-db": "tsx scripts/check-db.ts",
-  "seed-manual": "tsx scripts/seed-manual.ts"
+  "seed-manual": "tsx scripts/seed-manual.ts",
+  "seed-ingredients": "tsx scripts/seed-ingredients.ts",
+  "validate-i18n": "tsx scripts/validate-i18n.ts"
 },
   "dependencies": {
     "@radix-ui/react-checkbox": "^1.1.2",

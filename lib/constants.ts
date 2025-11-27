@@ -21,7 +21,7 @@ export const TRANSLATIONS = {
     language: "Language",
     dutch: "Dutch",
     english: "English",
-    
+
     // Navigation
     dashboard: "Dashboard",
     recipes: "Recipes",
@@ -29,7 +29,24 @@ export const TRANSLATIONS = {
     shopping: "Shopping",
     settings: "Settings",
     signOut: "Sign Out",
-    
+
+    // Common Actions
+    save: "Save",
+    cancel: "Cancel",
+    delete: "Delete",
+    edit: "Edit",
+    add: "Add",
+    remove: "Remove",
+    confirm: "Confirm",
+    close: "Close",
+    back: "Back",
+    next: "Next",
+    loading: "Loading...",
+    search: "Search",
+    filter: "Filter",
+    clear: "Clear",
+    undo: "Undo",
+
     // Recipe Form
     quantity: "Quantity",
     unit: "Unit",
@@ -48,7 +65,7 @@ export const TRANSLATIONS = {
     ingredients: "Ingredients",
     instructions: "Instructions",
     saveRecipe: "Save Recipe",
-    cancel: "Cancel",
+    updateRecipe: "Update Recipe",
     basicInformation: "Basic Information",
     addStep: "Add Step",
     stepDescription: "Step description",
@@ -56,22 +73,42 @@ export const TRANSLATIONS = {
     manualEntry: "Manual Entry",
     pasteRecipeUrl: "Paste recipe URL",
     fillManually: "Fill in the recipe details manually",
-    
+    searchIngredients: "Search ingredients...",
+    createNewIngredient: "Create new ingredient",
+    selectIngredient: "Select an ingredient",
+
     // Recipes Page
     manageRecipes: "Manage your recipe collection",
     addRecipe: "Add Recipe",
+    editRecipe: "Edit Recipe",
+    deleteRecipe: "Delete Recipe",
     noRecipesYet: "No recipes yet",
     startBuilding: "Start building your collection by adding your first recipe",
     addFirstRecipe: "Add Your First Recipe",
     backToRecipes: "Back to Recipes",
     source: "Source",
-    
+    viewRecipe: "View Recipe",
+    recipeDetails: "Recipe Details",
+
+    // Recipe Delete Confirmation
+    deleteRecipeConfirm: "Delete Recipe?",
+    deleteRecipeMessage: "Are you sure you want to delete",
+    deleteRecipeWarning: "This will remove the recipe from your collection and any meal plans. This action cannot be undone.",
+    recipeDeleted: "Recipe deleted successfully",
+    recipeDeletedError: "Failed to delete recipe",
+
+    // Recipe Edit/Create Messages
+    recipeSaved: "Recipe saved successfully",
+    recipeSaveError: "Failed to save recipe",
+    recipeUpdated: "Recipe updated successfully",
+    recipeUpdateError: "Failed to update recipe",
+
     // Dashboard
     welcomeBack: "Welcome back",
     quickActions: "Quick Actions",
     recentRecipes: "Recent Recipes",
     thisWeeksPlan: "This Week's Plan",
-    
+
     // Settings
     manageHousehold: "Manage your household and preferences",
     createHousehold: "Create Your Household",
@@ -84,20 +121,103 @@ export const TRANSLATIONS = {
     languageSettings: "Language Settings",
     chooseLanguage: "Choose your preferred language",
     saveSettings: "Save Settings",
-    
+    settingsSaved: "Settings saved successfully",
+    settingsSaveError: "Failed to save settings",
+
     // Planner
     weekPlanner: "Week Planner",
     planYourMeals: "Plan your meals for the week",
-    
+    savePlan: "Save Plan",
+    spinWeek: "Spin Week",
+    spinDay: "Spin Day",
+    lockDay: "Lock Day",
+    unlockDay: "Unlock Day",
+    selectRecipe: "Select Recipe",
+    noRecipeSelected: "No recipe selected",
+    planSaved: "Plan saved successfully",
+    planSaveError: "Failed to save plan",
+
     // Shopping
     shoppingList: "Shopping List",
     manageShoppingList: "Manage your shopping list",
+    generateList: "Generate Shopping List",
+    clearList: "Clear List",
+    clearListConfirm: "Clear Shopping List?",
+    clearListMessage: "Are you sure you want to clear the entire shopping list? This action cannot be undone.",
+    listCleared: "Shopping list cleared",
+    listClearError: "Failed to clear shopping list",
+    itemRemoved: "Item removed",
+    itemRemoveError: "Failed to remove item",
+    noItemsInList: "No items in your shopping list",
+    addItemsFromPlanner: "Generate a list from your meal planner",
+    obtained: "Obtained",
+    category: "Category",
+    fromRecipes: "From recipes",
+
+    // Ingredient Management
+    ingredientAdded: "Ingredient added",
+    ingredientAddError: "Failed to add ingredient",
+    ingredientUpdated: "Ingredient updated",
+    ingredientUpdateError: "Failed to update ingredient",
+    ingredientDeleted: "Ingredient deleted",
+    ingredientDeleteError: "Failed to delete ingredient",
+    createIngredientPrompt: "Create new ingredient:",
+    enterEnglishName: "English name",
+    enterDutchName: "Dutch name (optional)",
+    ingredientExists: "This ingredient already exists",
+
+    // Validation Messages
+    required: "This field is required",
+    invalidEmail: "Invalid email address",
+    invalidUrl: "Invalid URL",
+    minLength: "Minimum length is",
+    maxLength: "Maximum length is",
+    mustBeNumber: "Must be a number",
+    mustBePositive: "Must be a positive number",
+
+    // Error Messages
+    errorOccurred: "An error occurred",
+    tryAgain: "Please try again",
+    notFound: "Not found",
+    unauthorized: "Unauthorized",
+    serverError: "Server error",
+    networkError: "Network error",
+
+    // Success Messages
+    success: "Success",
+    changesSaved: "Changes saved",
+    actionCompleted: "Action completed",
+
+    // Empty States
+    noData: "No data available",
+    noResults: "No results found",
+    emptyList: "List is empty",
+
+    // Time/Date
+    today: "Today",
+    yesterday: "Yesterday",
+    tomorrow: "Tomorrow",
+    thisWeek: "This Week",
+    nextWeek: "Next Week",
+    lastWeek: "Last Week",
+    monday: "Monday",
+    tuesday: "Tuesday",
+    wednesday: "Wednesday",
+    thursday: "Thursday",
+    friday: "Friday",
+    saturday: "Saturday",
+    sunday: "Sunday",
+
+    // Units (for display)
+    minutes: "minutes",
+    hours: "hours",
+    servingsCount: "servings",
   },
   nl: {
     language: "Taal",
     dutch: "Nederlands",
     english: "Engels",
-    
+
     // Navigation
     dashboard: "Dashboard",
     recipes: "Recepten",
@@ -105,7 +225,24 @@ export const TRANSLATIONS = {
     shopping: "Boodschappen",
     settings: "Instellingen",
     signOut: "Uitloggen",
-    
+
+    // Common Actions
+    save: "Opslaan",
+    cancel: "Annuleren",
+    delete: "Verwijderen",
+    edit: "Bewerken",
+    add: "Toevoegen",
+    remove: "Verwijderen",
+    confirm: "Bevestigen",
+    close: "Sluiten",
+    back: "Terug",
+    next: "Volgende",
+    loading: "Laden...",
+    search: "Zoeken",
+    filter: "Filteren",
+    clear: "Wissen",
+    undo: "Ongedaan maken",
+
     // Recipe Form
     quantity: "Hoeveelheid",
     unit: "Eenheid",
@@ -124,7 +261,7 @@ export const TRANSLATIONS = {
     ingredients: "Ingrediënten",
     instructions: "Instructies",
     saveRecipe: "Recept Opslaan",
-    cancel: "Annuleren",
+    updateRecipe: "Recept Bijwerken",
     basicInformation: "Basis Informatie",
     addStep: "Stap Toevoegen",
     stepDescription: "Stap beschrijving",
@@ -132,22 +269,42 @@ export const TRANSLATIONS = {
     manualEntry: "Handmatige Invoer",
     pasteRecipeUrl: "Plak recept URL",
     fillManually: "Vul de receptdetails handmatig in",
-    
+    searchIngredients: "Zoek ingrediënten...",
+    createNewIngredient: "Nieuw ingrediënt aanmaken",
+    selectIngredient: "Selecteer een ingrediënt",
+
     // Recipes Page
     manageRecipes: "Beheer je receptenverzameling",
     addRecipe: "Recept Toevoegen",
+    editRecipe: "Recept Bewerken",
+    deleteRecipe: "Recept Verwijderen",
     noRecipesYet: "Nog geen recepten",
     startBuilding: "Begin met het opbouwen van je verzameling door je eerste recept toe te voegen",
     addFirstRecipe: "Voeg Je Eerste Recept Toe",
     backToRecipes: "Terug naar Recepten",
     source: "Bron",
-    
+    viewRecipe: "Recept Bekijken",
+    recipeDetails: "Recept Details",
+
+    // Recipe Delete Confirmation
+    deleteRecipeConfirm: "Recept Verwijderen?",
+    deleteRecipeMessage: "Weet je zeker dat je wilt verwijderen",
+    deleteRecipeWarning: "Dit verwijdert het recept uit je verzameling en alle maaltijdplannen. Deze actie kan niet ongedaan worden gemaakt.",
+    recipeDeleted: "Recept succesvol verwijderd",
+    recipeDeletedError: "Kan recept niet verwijderen",
+
+    // Recipe Edit/Create Messages
+    recipeSaved: "Recept succesvol opgeslagen",
+    recipeSaveError: "Kan recept niet opslaan",
+    recipeUpdated: "Recept succesvol bijgewerkt",
+    recipeUpdateError: "Kan recept niet bijwerken",
+
     // Dashboard
     welcomeBack: "Welkom terug",
     quickActions: "Snelle Acties",
     recentRecipes: "Recente Recepten",
     thisWeeksPlan: "Plan van Deze Week",
-    
+
     // Settings
     manageHousehold: "Beheer je huishouden en voorkeuren",
     createHousehold: "Maak Je Huishouden Aan",
@@ -160,13 +317,96 @@ export const TRANSLATIONS = {
     languageSettings: "Taalinstellingen",
     chooseLanguage: "Kies je voorkeurstaal",
     saveSettings: "Instellingen Opslaan",
-    
+    settingsSaved: "Instellingen succesvol opgeslagen",
+    settingsSaveError: "Kan instellingen niet opslaan",
+
     // Planner
     weekPlanner: "Week Planner",
     planYourMeals: "Plan je maaltijden voor de week",
-    
+    savePlan: "Plan Opslaan",
+    spinWeek: "Week Draaien",
+    spinDay: "Dag Draaien",
+    lockDay: "Dag Vergrendelen",
+    unlockDay: "Dag Ontgrendelen",
+    selectRecipe: "Selecteer Recept",
+    noRecipeSelected: "Geen recept geselecteerd",
+    planSaved: "Plan succesvol opgeslagen",
+    planSaveError: "Kan plan niet opslaan",
+
     // Shopping
     shoppingList: "Boodschappenlijst",
     manageShoppingList: "Beheer je boodschappenlijst",
+    generateList: "Boodschappenlijst Genereren",
+    clearList: "Lijst Wissen",
+    clearListConfirm: "Boodschappenlijst Wissen?",
+    clearListMessage: "Weet je zeker dat je de hele boodschappenlijst wilt wissen? Deze actie kan niet ongedaan worden gemaakt.",
+    listCleared: "Boodschappenlijst gewist",
+    listClearError: "Kan boodschappenlijst niet wissen",
+    itemRemoved: "Item verwijderd",
+    itemRemoveError: "Kan item niet verwijderen",
+    noItemsInList: "Geen items in je boodschappenlijst",
+    addItemsFromPlanner: "Genereer een lijst vanuit je maaltijdplanner",
+    obtained: "Verkregen",
+    category: "Categorie",
+    fromRecipes: "Van recepten",
+
+    // Ingredient Management
+    ingredientAdded: "Ingrediënt toegevoegd",
+    ingredientAddError: "Kan ingrediënt niet toevoegen",
+    ingredientUpdated: "Ingrediënt bijgewerkt",
+    ingredientUpdateError: "Kan ingrediënt niet bijwerken",
+    ingredientDeleted: "Ingrediënt verwijderd",
+    ingredientDeleteError: "Kan ingrediënt niet verwijderen",
+    createIngredientPrompt: "Nieuw ingrediënt aanmaken:",
+    enterEnglishName: "Engelse naam",
+    enterDutchName: "Nederlandse naam (optioneel)",
+    ingredientExists: "Dit ingrediënt bestaat al",
+
+    // Validation Messages
+    required: "Dit veld is verplicht",
+    invalidEmail: "Ongeldig e-mailadres",
+    invalidUrl: "Ongeldige URL",
+    minLength: "Minimale lengte is",
+    maxLength: "Maximale lengte is",
+    mustBeNumber: "Moet een getal zijn",
+    mustBePositive: "Moet een positief getal zijn",
+
+    // Error Messages
+    errorOccurred: "Er is een fout opgetreden",
+    tryAgain: "Probeer het opnieuw",
+    notFound: "Niet gevonden",
+    unauthorized: "Niet geautoriseerd",
+    serverError: "Serverfout",
+    networkError: "Netwerkfout",
+
+    // Success Messages
+    success: "Succes",
+    changesSaved: "Wijzigingen opgeslagen",
+    actionCompleted: "Actie voltooid",
+
+    // Empty States
+    noData: "Geen gegevens beschikbaar",
+    noResults: "Geen resultaten gevonden",
+    emptyList: "Lijst is leeg",
+
+    // Time/Date
+    today: "Vandaag",
+    yesterday: "Gisteren",
+    tomorrow: "Morgen",
+    thisWeek: "Deze Week",
+    nextWeek: "Volgende Week",
+    lastWeek: "Vorige Week",
+    monday: "Maandag",
+    tuesday: "Dinsdag",
+    wednesday: "Woensdag",
+    thursday: "Donderdag",
+    friday: "Vrijdag",
+    saturday: "Zaterdag",
+    sunday: "Zondag",
+
+    // Units (for display)
+    minutes: "minuten",
+    hours: "uren",
+    servingsCount: "porties",
   },
 } as const;

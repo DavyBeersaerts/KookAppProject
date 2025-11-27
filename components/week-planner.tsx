@@ -147,10 +147,6 @@ export function WeekPlanner({
           <Shuffle className="mr-2 h-4 w-4" />
           Spin Full Week
         </Button>
-        <Button onClick={handleSavePlan} disabled={loading} variant="secondary">
-          <Calendar className="mr-2 h-4 w-4" />
-          Save Plan
-        </Button>
         <Button onClick={handleGenerateList} disabled={loading} variant="outline">
           <ShoppingCart className="mr-2 h-4 w-4" />
           Generate Shopping List
